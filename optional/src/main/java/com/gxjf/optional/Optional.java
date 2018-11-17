@@ -1,7 +1,8 @@
-package com.jf.optional;
+package com.gxjf.optional;
 
 import java.io.Serializable;
 import java.util.*;
+import java.util.Objects;
 
 /**
  * A wrapper class that wraps non-null values that may or may not be there. As this wrapper acts as a
@@ -21,13 +22,14 @@ public final class Optional<T> implements Serializable {
         this.value = null;
     }
 
+    @SuppressWarnings("unchecked")
     public static <T> Optional<T> empty() {
         Optional var0 = EMPTY;
         return var0;
     }
 
     private Optional(T var1) {
-        this.value = Objects.requireNonNull(var1);
+        this.value = java.util.Objects.requireNonNull(var1);
     }
     /**
      * Wraps a value in a non-empty wrapper if the value is non-null and returns the wrapped value,
@@ -41,6 +43,7 @@ public final class Optional<T> implements Serializable {
         return value == null?empty():of(value);
     }
 
+    @SuppressWarnings("unchecked")
     public static <T> Optional<T> of(T value) {
         return  new Optional(value);
     }
@@ -70,7 +73,7 @@ public final class Optional<T> implements Serializable {
      * @return the transformed object or an empty wrapper if executed on an empty-wrapper.
      */
     public <S> Optional<S> map(Function1<? super T, S> function) {
-        Objects.requireNonNull(function);
+        java.util.Objects.requireNonNull(function);
         return !this.isPresent() ? empty() : ofNullable(function.apply(this.value));
         // return of(function.apply(value));
     }
@@ -83,7 +86,7 @@ public final class Optional<T> implements Serializable {
      * @return the same instance of the wrapped object.
      */
     public Optional<T> filter(Predicate<? super T> predicate) {
-        Objects.requireNonNull(predicate);
+        java.util.Objects.requireNonNull(predicate);
         return !this.isPresent()?this:(predicate.test(this.value)?this:empty());
         /*
         if (predicate.verify(value)) {
@@ -104,8 +107,8 @@ public final class Optional<T> implements Serializable {
      */
     public <S> Optional<S> flatMap(Function1<? super T, Optional<S>> function) {
         // return function.apply(value);
-        Objects.requireNonNull(function);
-        return !this.isPresent()?empty():Objects.requireNonNull(function.apply(this.value));
+        java.util.Objects.requireNonNull(function);
+        return !this.isPresent()?empty(): java.util.Objects.requireNonNull(function.apply(this.value));
     }
 
     /**

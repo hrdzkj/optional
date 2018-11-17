@@ -7,14 +7,27 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
-        classpath 'com.novoda:bintray-release:0.4.0'
+        classpath 'me.tatarka:gradle-retrolambda:3.7.0'
+
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        classpath 'com.dicedmelon.gradle:jacoco-android:0.1.3'
     }
 }
 
 allprojects {
+
+    allprojects {
+        gradle.projectsEvaluated {
+            tasks.withType(JavaCompile) {
+                options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+            }
+        }
+    }
+
     repositories {
         google()
         jcenter()
+
     }
 
     tasks.withType(Javadoc) {
@@ -25,8 +38,24 @@ allprojects {
         }
     }
 
+
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    projectName = 'MyMavent'
+    projectDesc = 'Optional is a wrapper library that allows developers to use Optional since JDK 1.6.'
+
+    githubUrl = 'https://github.com/hrdzkj/optional'
+
+    mavenGroup = 'pub.hrdzkj'
+    mavenArtifactId = 'optional'
+    mavenVersion = '0.1.0'
+
+
+    compileSdk = 28
+    targetSdk = 28
 }

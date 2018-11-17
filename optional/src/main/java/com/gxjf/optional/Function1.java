@@ -1,4 +1,4 @@
-package com.jf.optional;
+package com.gxjf.optional;
 
 public interface Function1<T, K> {
 
