@@ -17,13 +17,13 @@ dependencies {
 
 ### Basic
 
-To begin using Optional, it's like using java.util:
+To begin using Optional, it's like using java.util.Optional:
 
 
 ```java
-            Optional<String> lastName = Optional.ofNullable("Daisuke");
-            Optional<String> firstName = Optional.ofNullable("Sato");
-            Optional<String> fullname = lastName.flatMap(new Function1<String, Optional<String>>() {
+        Optional<String> lastName = Optional.ofNullable("Daisuke");
+        Optional<String> firstName = Optional.ofNullable("Sato");
+        Optional<String> fullname = lastName.flatMap(new Function1<String, Optional<String>>() {
                         @Override
                         public Optional<String> apply(final String ln) {
                             return firstName.map(new Function1<String, String>() {
