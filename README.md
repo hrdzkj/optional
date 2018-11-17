@@ -1,4 +1,4 @@
-# Optional [![Build Status][1]][2] [![Code Coverage][3]][4] [![Android Weekly][5]][6]
+# Optional
 
 Optional is a wrapper library that allows developers to use Optional since JDK 1.6.
 
