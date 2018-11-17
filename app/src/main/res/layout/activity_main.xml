@@ -15,4 +15,16 @@
         android:textColor="@color/colorAccent"
         android:text="optionalTest" />
 
+
+    <TextView
+        android:id="@+id/textLamba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="60dp"
+        android:background="#e9e9e9"
+        android:padding="10dp"
+        android:textColor="@color/colorAccent"
+        android:text="textLamba" />
+
 </LinearLayout>

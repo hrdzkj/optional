@@ -21,23 +21,27 @@ To begin using Optional, it's like using java.util:
 
 
 ```java
-Optional<String> lastName = Optional.ofNullable("Daisuke");
-Optional<String> firstName = Optional.ofNullable("Sato");
-Optional<String> fullname =
-        lastName.flatMap(new Func1<String, Optional<String>>() {
-            @Override
-            public Optional<String> call(final String ln) {
-                return firstName.map(new Func1<String, String>() {
-                    @Override
-                    public String call(final String fn) {
-                        return Strings.join(" ", ln, fn);
-                    }
-                });
-            }
-        });
+            Optional<String> lastName = Optional.ofNullable("Daisuke");
+            Optional<String> firstName = Optional.ofNullable("Sato");
+            Optional<String> fullname = lastName.flatMap(new Function1<String, Optional<String>>() {
+                        @Override
+                        public Optional<String> apply(final String ln) {
+                            return firstName.map(new Function1<String, String>() {
+                                @Override
+                                public String apply(final String fn) {
+                                    return ln + "-" + fn;
+                                }
+                            });
+                        }
+                    });
 
 // With retrolambda
-fullName = lastName.flatMap(ln -> firstName.map(fn -> Strings.join(" ", ln, fn)));
+        Optional<String> lastName = Optional.ofNullable("Daisuke");
+        Optional<String> firstName = Optional.ofNullable("Sato");
+        Optional<String> fullname = lastName.flatMap(ln -> firstName.map(fn -> {
+                    return ln + "-" + fn;
+                }));
+
 ```
 
 ## LICENSE
