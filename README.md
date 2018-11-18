@@ -9,7 +9,7 @@ Optional is installed by adding the following dependency to your `build.gradle` 
 
 ```groovy
 dependencies {
-    implementation 'pub.hrdzkj:0.1.0'
+    implementation 'com.hrdzkj.optional:0.1.0'
 }
 ```
 
