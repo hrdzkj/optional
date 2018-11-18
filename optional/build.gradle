@@ -10,7 +10,7 @@ android {
         minSdkVersion 20
         targetSdkVersion compileSdk
         versionCode 1
-        versionName mavenVersion
+        versionName '0.1'
     }
 
     buildTypes {

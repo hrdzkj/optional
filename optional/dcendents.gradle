@@ -1,7 +1,7 @@
 ext {
-    bintrayRepo = 'optional' //仓库名
+    bintrayRepo = 'AndroidMeven' //仓库名
     bintrayName = 'optional' //项目名
-    publishedGroupId = 'com.hrdzkj' //发布id,一般为包名
+    publishedGroupId = 'com.hrdzkj' //发布id
     artifact = 'optional' //jcenter的ArtifactId:一般是项目名
     libraryVersion = '0.1.0' //发布的版本号:每次上传必须不一样
     siteUrl = 'https://github.com/hrdzkj/optional' //网站地址

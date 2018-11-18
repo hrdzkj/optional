@@ -50,7 +50,10 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
+
 ext {
+    /*
+}
     projectName = 'optional'
     projectDesc = 'Optional is a wrapper library that allows developers to use Optional since JDK 1.6.'
 
@@ -59,9 +62,10 @@ ext {
     mavenGroup = 'com.hrdzkj'
     mavenArtifactId = 'optional'
     mavenVersion = '0.1.0'
-
+    */
 
     compileSdk = 28
     targetSdk = 28
 }
+
 apply plugin: 'me.tatarka.retrolambda'
