@@ -10,8 +10,10 @@ task sourcesJar(type: Jar) {
 }
 
 task javadoc(type: Javadoc) {
+    //source = android.sourceSets.main.java.srcDirs
+    //classpath += configurations.compile
+    //classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
     source = android.sourceSets.main.java.srcDirs
-    classpath += configurations.compile
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 
     failOnError = false
@@ -44,7 +46,7 @@ publishing {
                 asNode().appendNode('name', "Optional")
 
                 // Description
-                asNode().appendNode('description', 'Optional is a wrapper library that allows developers to use Optional since JDK 1.6.')
+                asNode().appendNode('description', 'Optional is a wrapper library that allows developers to use Optional since JDK 1.6')
 
                 // URL
                 asNode().appendNode('url', 'https://github.com/hrdzkj/optional')
@@ -92,6 +94,7 @@ bintray {
     key =  properties.getProperty("BINTRAY_KEY")
    // user = hasProperty('BINTRAY_USER') ? getProperty('BINTRAY_USER') : System.getenv('BINTRAY_USER')
     //key =  hasProperty('BINTRAY_KEY') ? getProperty('BINTRAY_KEY') : System.getenv('BINTRAY_KEY')
+   /*
     filesSpec {
         from "$buildDir/publications/library/pom-default.xml"
         into "pub/devrel/$mavenArtifactId/$mavenVersion/"
@@ -99,7 +102,7 @@ bintray {
             "${mavenArtifactId}-${mavenVersion}.pom"
         }
     }
-
+*/
     configurations = [ 'archives' ]
 
     pkg {
