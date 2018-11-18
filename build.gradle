@@ -46,7 +46,7 @@ task clean(type: Delete) {
 }
 
 ext {
-    projectName = 'MyMavent'
+    projectName = 'optional'
     projectDesc = 'Optional is a wrapper library that allows developers to use Optional since JDK 1.6.'
 
     githubUrl = 'https://github.com/hrdzkj/optional'
