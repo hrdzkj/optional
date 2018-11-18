@@ -1,4 +1,4 @@
-package com.gxjf.optional;
+package com.hrdzkj.optional;
 
 public interface Function0<T> {
 

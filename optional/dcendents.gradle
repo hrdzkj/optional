@@ -1,0 +1,21 @@
+ext {
+    bintrayRepo = 'optional' //仓库名
+    bintrayName = 'optional' //项目名
+    publishedGroupId = 'com.hrdzkj' //发布id,一般为包名
+    artifact = 'optional' //jcenter的ArtifactId:一般是项目名
+    libraryVersion = '0.1.0' //发布的版本号:每次上传必须不一样
+    siteUrl = 'https://github.com/hrdzkj/optional' //网站地址
+    gitUrl = 'https://github.com/hrdzkj/optional.git' //git地址
+    libraryName = 'optional' //项目名
+    libraryDescription = 'A optional for Android' //项目描述
+//开发者信息
+    developerId = 'hrdzkj'
+    developerName = 'hrdzkj'
+    developerEmail = ' gxjfICT@gmail.com'
+//版权信息
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+apply from: 'https://raw.githubusercontent.com/llxdaxia/GradleScript/master/install_v1.gradle'
+apply from: 'https://raw.githubusercontent.com/llxdaxia/GradleScript/master/bintray_v1.gradle'

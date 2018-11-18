@@ -1,12 +1,8 @@
-package com.gxjf.optionaldemo;
+package com.hrdzkj.optional;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-
-import com.gxjf.optional.Function1;
-import com.gxjf.optional.Optional;
 
 
 public class MainActivity extends AppCompatActivity {

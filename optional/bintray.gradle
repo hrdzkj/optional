@@ -34,6 +34,7 @@ publishing {
         library(MavenPublication) {
 
             groupId mavenGroup
+
             artifactId mavenArtifactId
             version mavenVersion
 

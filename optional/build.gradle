@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'jacoco-android'
-apply plugin: 'me.tatarka.retrolambda'
+// apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion compileSdk
@@ -45,4 +45,5 @@ tasks.withType(Test) {
     jacoco.includeNoLocationClasses = true
 }
 
-apply from: 'bintray.gradle'
+
+apply from: 'dcendents.gradle'
