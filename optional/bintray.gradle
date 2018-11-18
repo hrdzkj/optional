@@ -86,9 +86,10 @@ publishing {
 }
 
 bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
-
+     //user = hasProperty('BINTRAY_USER') ? getProperty('BINTRAY_USER') : System.getenv('BINTRAY_USER')
+     // key = hasProperty('BINTRAY_KEY') ? getProperty('BINTRAY_KEY') : System.getenv('BINTRAY_KEY')
+    user = hasProperty('bintray.user') ? getProperty('bintray.user') : System.getenv('bintray.user')
+    key = hasProperty('bintray.apikey') ? getProperty('bintray.apikey') : System.getenv('bintray.apikey')
     filesSpec {
         from "$buildDir/publications/library/pom-default.xml"
         into "pub/devrel/$mavenArtifactId/$mavenVersion/"
