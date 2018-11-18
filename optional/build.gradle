@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'jacoco-android'
-// apply plugin: 'me.tatarka.retrolambda'
+
+apply plugin: 'maven'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion compileSdk
@@ -46,4 +48,5 @@ tasks.withType(Test) {
 }
 
 
-apply from: 'dcendents.gradle'
+ //apply from: 'dcendents.gradle'
+apply from: 'novoda.gradle'
