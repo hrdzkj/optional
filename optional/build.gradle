@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'jacoco-android'
 
 //apply plugin: 'maven'
-//apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.novoda.bintrayUpload-release'
 
 android {
     compileSdkVersion compileSdk
@@ -48,5 +48,5 @@ tasks.withType(Test) {
 }
 
 
- apply from: 'dcendents.gradle'
-//apply from: 'novoda.gradle'
+ //apply from: 'dcendents.gradle'
+apply from: 'bintrayUpload.gradle'

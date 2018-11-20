@@ -1,8 +1,0 @@
-publish {
-    userOrg = 'gxjfICT'
-    groupId = 'com.hrdzkj'
-    artifactId = 'optional'
-    version = '0.1.0'
-    description = 'Optional is a wrapper library that allows developers to use Optional since JDK 1.6'
-    website = "https://github.com/hrdzkj/optional"
-}
