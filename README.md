@@ -5,7 +5,7 @@ Optional is a wrapper library that allows developers to use Optional since JDK 1
 
 ## Installation
 
-add the following remote maven url to root `build.gradle` file:
+add the following remote maven url to your root `build.gradle` file:
 ```groovy
 allprojects {
     repositories {
@@ -14,7 +14,7 @@ allprojects {
     }
 }
 ```
-add the following dependency to your `build.gradle` file:
+add the following dependency to your app module `build.gradle`  file:
 ```groovy
 dependencies {
     implementation 'com.hrdzkj:optional:0.1'
