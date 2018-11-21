@@ -5,19 +5,26 @@ Optional is a wrapper library that allows developers to use Optional since JDK 1
 
 ## Installation
 
-Optional is installed by adding the following dependency to your `build.gradle` file:
-
+add the following remote maven url to root `build.gradle` file:
 ```groovy
-dependencies {
-    implementation 'com.hrdzkj.optional:0.1.0'
+allprojects {
+    repositories {
+     ......
+     maven {url 'https://dl.bintray.com/gxjfict/AndroidMaven/'}
+    }
 }
 ```
-
+add the following dependency to your `build.gradle` file:
+```groovy
+dependencies {
+    implementation 'com.hrdzkj:optional:0.1'
+}
+```
 ## Usage
 
 ### Basic
 
-To begin using Optional, it's like using java.util.Optional:
+To begin using this Optional, it's like using java.util.Optional:
 
 
 ```java
